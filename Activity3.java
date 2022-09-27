@@ -2,10 +2,11 @@
 import java.util.Scanner;
 
 class Activity3 {
+    
     public static void main(String[] args) {
 
         //Andrew Felix Cunanan
-        
+
         method();
 
     }
