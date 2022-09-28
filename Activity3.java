@@ -4,7 +4,7 @@ class Activity3 {
 
     public static void main(String[] args) {
 
-        //Andrew Felix Cunanan
+        // Andrew Felix Cunanan
 
         method();
 
@@ -18,38 +18,51 @@ class Activity3 {
         Scanner sc = new Scanner(System.in);
         printer("Enter Source Language: ");
         String i = sc.nextLine();
-
         printer("Output is: ");
-        String input[] = i.split(" ", 5);
+        String input[] = i.split(" ");
         String choices[] = { "String", "int", "char", "double" };
         int val = 0;
+        String array[] = new String[5];
+        int x = 0;
+        String CONSTANT = "<data_type>";
         for (String string : input) {
 
             if (string.contains(choices[0])) {
-                printer("<data_type>");
+                array[x] = CONSTANT;
+
             } else if (string.contains(choices[1])) {
-                printer("<data_type>");
+                array[x] = CONSTANT;
+
             } else if (string.contains(choices[2])) {
-                printer("<data_type>");
+                array[x] = CONSTANT;
+
             } else if (string.contains(choices[3])) {
-                printer("<data_type>");
+                array[x] = CONSTANT;
+
             } else if (string.contains("=")) {
-                printer("<assignment_operator>");
+                array[x + 2] = "<assignment_operator>";
+
             } else if (string.contains(";")) {
                 if (val == 0 && string.contains("\"") || string.contains(";")
                         || string.contains("'")) {
-                    printer("<value><delimiter>");
+                    array[x + 3] = "<value>";
+                    array[x + 4] = "<delimiter>";
+
                 } else if (string.contains(";")) {
-                    printer("<delimiter>");
+                    array[x + 4] = "<delimiter>";
+
                 }
-            } else if (val == 0 && string.contains("\"")
-                    || string.contains("'")) {
+            } else if (val == 0 && string.contains("\"") || string.contains("'")) {
                 val++;
-                printer("<value>");
+                array[x + 3] = "<value>";
+
             } else {
-                printer("<identifier>");
+                array[x + 1] = "<identifier>";
             }
 
+        }
+        for (String string : array) {
+            printer(string);
         }
     }
 }
