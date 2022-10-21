@@ -14,7 +14,7 @@ public class Activity4 {
         String input = sc.nextLine();
         String str = "";
 
-        if (input.contains("<data_type><identifier><assignment_operator><value><delimiter>")) {
+        if (input.contains("<data_type> <identifier> <assignment_operator> <value> <delimiter>")) {
             str += "Syntax is Correct!";
         } else {
             str += "Syntax is Error!";
