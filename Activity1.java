@@ -9,6 +9,7 @@ class Activity1 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a String: ");
         String string = sc.nextLine();
+        sc.close();
 
         function(string);
     }

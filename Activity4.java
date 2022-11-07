@@ -18,6 +18,7 @@ public class Activity4 {
                 || input.contains("<data_type> <identifier> <delimiter>") ? "Syntax is Correct!" : "Syntax is Correct!";
 
         System.out.println(str);
+        sc.close();
 
     }
 

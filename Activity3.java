@@ -61,6 +61,7 @@ class Activity3 {
             }
 
         }
+        sc.close();
         for (String string : array) {
             printer(string);
         }
