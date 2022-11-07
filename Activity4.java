@@ -16,7 +16,12 @@ public class Activity4 {
 
         if (input.contains("<data_type> <identifier> <assignment_operator> <value> <delimiter>")) {
             str += "Syntax is Correct!";
-        } else {
+        } 
+        else if(input.contains("<data_type> <identifier> <delimiter>"))
+        {
+            str += "Syntax is Correct!";
+        }
+        else {
             str += "Syntax is Error!";
         }
 
